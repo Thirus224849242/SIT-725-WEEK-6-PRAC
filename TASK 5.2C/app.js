@@ -31,9 +31,11 @@ app.use("/", userRoutes);  // This should now work correctly
 // route to render the view
 app.get("/", (req, res) => {
   res.render("index"); // This will render the "views/index.ejs" file
+ //res.status(200).json({ message: "Welcome to Bhasker Awards App" });
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log("App running at http://localhost:" + port);
-});
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log("App running at http://localhost:" + port);
+// });
+module.exports=app
